@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Portfolio Messages</title>
+  <meta name="description" content="Admin dashboard for reviewing portfolio contact form messages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-noise"></div>
+
+  <main class="admin-shell">
+    <section class="hero-panel">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+      <div class="hero-copy-wrap">
+        <p class="eyebrow">Private Control Room</p>
+        <h1>Inbox dashboard for your portfolio.</h1>
+        <p class="hero-copy">
+          Sign in, review incoming messages, export records for follow-up, and remove test entries without leaving the browser.
+        </p>
+      </div>
+
+      <div class="hero-highlights">
+        <article class="highlight-card">
+          <span class="highlight-label">Workflow</span>
+          <strong>Review, export, clean up</strong>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">Security</span>
+          <strong>Password-protected backend access</strong>
+        </article>
+      </div>
+
+      <div class="hero-actions">
+        <a href="/" class="ghost-link">Back to portfolio</a>
+        <span class="hero-hint">Open from `http://127.0.0.1:3000/admin`</span>
+      </div>
+    </section>
+
+    <section class="dashboard-panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-label">Admin Access</p>
+          <h2>Message Center</h2>
+        </div>
+        <div class="status-pill" id="connectionStatus">Waiting for sign in</div>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="input-stack">
+          <label for="adminPassword" class="input-label">Admin Password</label>
+          <div class="input-row">
+            <input
+              type="password"
+              id="adminPassword"
+              class="password-input"
+              placeholder="Enter admin password"
+              autocomplete="current-password"
+              required
+            >
+            <button type="button" id="togglePasswordButton" class="icon-btn" aria-label="Show password">Show</button>
+            <button type="submit" class="primary-btn">Unlock Dashboard</button>
+          </div>
+        </div>
+        <p class="form-note">Your password stays in the current browser session only.</p>
+      </form>
+
+      <div class="toolbar">
+        <div class="toolbar-group">
+          <label for="limitSelect">Show</label>
+          <select id="limitSelect" class="select-input">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+          <span>messages</span>
+        </div>
+
+        <div class="toolbar-group toolbar-actions">
+          <button type="button" id="refreshButton" class="secondary-btn" disabled>Refresh</button>
+          <button type="button" id="exportCsvButton" class="secondary-btn" disabled>Export CSV</button>
+          <button type="button" id="exportJsonButton" class="secondary-btn" disabled>Export JSON</button>
+          <button type="button" id="logoutButton" class="secondary-btn secondary-btn-muted" disabled>Logout</button>
+        </div>
+      </div>
+
+      <div class="feedback-message" id="feedbackMessage"></div>
+
+      <div class="stats-grid">
+        <article class="stat-card stat-card-accent">
+          <span class="stat-label">Loaded Messages</span>
+          <strong class="stat-value" id="messageCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Latest Subject</span>
+          <strong class="stat-value stat-value-small" id="latestSubject">No data</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Latest Sender</span>
+          <strong class="stat-value stat-value-small" id="latestSender">No data</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Last Updated</span>
+          <strong class="stat-value stat-value-small" id="lastUpdated">Not loaded</strong>
+        </article>
+      </div>
+
+      <div class="messages-list" id="messagesList">
+        <div class="empty-state">
+          <h3>Locked</h3>
+          <p>Enter your admin password to load saved contact submissions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanay Sasane | MERN Stack & DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Tanay Sasane, a MERN Stack and DevOps engineer building scalable web applications and cloud infrastructure.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="intro-active">
+
+<!-- ✨ CUSTOM CURSOR (For mouse movement) -->
+<div class="cursor"></div>
+<div class="cursor-glow"></div>
+
+<!-- 🧭 HEADER & NAVBAR -->
+<header>
+  <nav class="navbar">
+    <!-- Logo with glow -->
+    <a href="#home" class="logo-container" aria-label="Go to home section">
+      <h2 class="logo">Tanay Sasane</h2>
+      <span class="logo-glow"></span>
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#publications" class="nav-link">Publications</a></li>
+    </ul>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+<!-- 🦸 HERO SECTION (With animated particles, typing effect, parallax) -->
+
+<section id="home" class="hero">
+  <!-- Animated particle background -->
+  <div id="particles" class="particles-container"></div>
+
+  <!-- Floating shapes background -->
+  <div class="hero-bg-shape hero-shape-1"></div>
+  <div class="hero-bg-shape hero-shape-2"></div>
+  <div class="hero-bg-shape hero-shape-3"></div>
+
+  <div class="intro-screen" id="introScreen" aria-hidden="true">
+    <div class="intro-orb intro-orb-1"></div>
+    <div class="intro-orb intro-orb-2"></div>
+    <div class="intro-grid"></div>
+    <div class="intro-center">
+      <div class="intro-card">
+        <h1 class="intro-title">
+          <span class="intro-title-text" data-text="Tanay Sasane">Tanay Sasane</span>
+        </h1>
+        <span class="intro-title-rule" aria-hidden="true"></span>
+        <p class="intro-tagline">Building modern web applications and cloud solutions</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Animated Profile Image with glow -->
+    <div class="profile-pic-wrapper" data-aos="zoom-in" data-aos-duration="800">
+        <a href="https://drive.google.com/file/d/1z4aXZ5pjVZ7I4VkTFm1JGicc-cW0xlv6/view?usp=sharing" target="_blank" rel="noopener">
+          <img src="https://drive.google.com/uc?export=view&id=1z4aXZ5pjVZ7I4VkTFm1JGicc-cW0xlv6" onerror="this.onerror=null;this.src='photo.jpg';" class="profile-pic" alt="Tanay Sasane" loading="eager" fetchpriority="high" decoding="async">
+        </a>
+        <div class="profile-glow"></div>
+    </div>
+
+    <!-- Animated Title with typing effect -->
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+      <span class="hero-prefix">Hi, I am</span>
+      <span class="hero-name">Tanay Sasane</span>
+    </h1>
+
+    <!-- Animated typing effect for roles -->
+    <div class="typing-wrapper" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="typing"></h3>
+    </div>
+
+    <!-- Subtitle typing effect -->
+    <div class="subtitle-typing-wrapper" data-aos="fade-up" data-aos-delay="400">
+      <p class="subtitle-typing"></p>
+    </div>
+
+    <!-- Animated Hero Description -->
+    <p class="hero-text" data-aos="fade-up" data-aos-delay="500">
+      A <span class="hero-highlight">MERN Stack & DevOps Engineer</span> focused on building full-stack web applications and scalable cloud infrastructure.<br>
+      I automate deployments using AWS services and modern DevOps tools while building APIs and UI with the MERN stack.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+      <a href="#projects" class="btn btn-primary">
+        <span>View Projects</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="https://drive.google.com/file/d/14qv7L9NxtrRglx-0okgxNb4rHky8kTDr/view?usp=drive_link" class="btn btn-secondary" target="_blank" rel="noopener">
+        <span>View Resume</span>
+        <i class="fas fa-file-arrow-down"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-section" data-aos="fade-up">
+  <div class="section-header">
+    <h2>About Me</h2>
+    <p class="section-subtitle">Full-Stack Developer & Cloud Architect</p>
+  </div>
+
+  <div class="about-content">
+    <p class="about-text" data-aos="fade-up" data-aos-delay="100">
+      I am a B.Tech Computer Science Engineering student specializing in
+      Cloud Computing, DevOps, and Full-Stack development using the MERN stack.
+    </p>
+
+    <p class="about-text" data-aos="fade-up" data-aos-delay="200">
+      I have hands-on experience with AWS services including EC2, S3,
+      RDS, IAM, VPC and deployment services like Elastic Beanstalk.
+    </p>
+
+    <p class="about-text" data-aos="fade-up" data-aos-delay="300">
+      I also build full-stack applications with MongoDB, Express, React,
+      and Node.js, and use DevOps tools such as Docker, Kubernetes,
+      Terraform, Jenkins and GitHub Actions to automate deployments
+      and build scalable infrastructure.
+    </p>
+
+    <!-- Stats section with counter animation -->
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-number" data-count="0">0</div>
+        <div class="stat-label">Fresher</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-number" data-count="10">10</div>
+        <div class="stat-label">+ Projects</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-number" data-count="25">25</div>
+        <div class="stat-label">+ Skills</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+        <div class="stat-number" data-count="2">2</div>
+        <div class="stat-label">Publications</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="education-section" data-aos="fade-up">
+  <h2>Education</h2>
+
+  <div class="timeline-container">
+    <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>B.Tech Computer Science Engineering</h3>
+        <p class="timeline-subtitle">Sanjivani College of Engineering (2021–2025)</p>
+        <p class="timeline-detail">CGPA: <strong>6.52</strong></p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>HSC</h3>
+        <p class="timeline-subtitle">Sanjivani Junior College</p>
+        <p class="timeline-detail">Percentage: <strong>78.67%</strong></p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>SSC</h3>
+        <p class="timeline-subtitle">Maharshi Vidya Mandir</p>
+        <p class="timeline-detail">Percentage: <strong>74.6%</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills-section" data-aos="fade-up">
+  <h2>Technical Skills</h2>
+  <p class="section-subtitle">Technologies & Tools I Master</p>
+
+  <!-- Skill Categories -->
+  <div class="skills-categories">
+    <!-- Full Stack (MERN) -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="category-title">
+        <i class="fas fa-cube"></i> Full Stack (MERN)
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="92">
+          <span class="skill-icon">⚛️</span>
+          <span class="skill-name">React.js</span>
+        </div>
+        <div class="skill-badge" data-skill="90">
+          <span class="skill-icon">Node</span>
+          <span class="skill-name">Node.js</span>
+        </div>
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">Ex</span>
+          <span class="skill-name">Express.js</span>
+        </div>
+        <div class="skill-badge" data-skill="89">
+          <span class="skill-icon">🍃</span>
+          <span class="skill-name">MongoDB</span>
+        </div>
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">API</span>
+          <span class="skill-name">REST APIs</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">🔐</span>
+          <span class="skill-name">JWT Auth</span>
+        </div>
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">⚙️</span>
+          <span class="skill-name">CRUD Ops</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud Platforms -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="category-title">
+        <i class="fas fa-cloud"></i> Cloud Platforms
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="90">
+          <span class="skill-icon">EC2</span>
+          <span class="skill-name">EC2</span>
+        </div>
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">S3</span>
+          <span class="skill-name">S3</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">🗄️</span>
+          <span class="skill-name">RDS</span>
+        </div>
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">🔑</span>
+          <span class="skill-name">IAM</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">🌐</span>
+          <span class="skill-name">VPC</span>
+        </div>
+        <div class="skill-badge" data-skill="84">
+          <span class="skill-icon">⚖️</span>
+          <span class="skill-name">ELB</span>
+        </div>
+        <div class="skill-badge" data-skill="82">
+          <span class="skill-icon">⚡</span>
+          <span class="skill-name">Lambda</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">🐳</span>
+          <span class="skill-name">ECS</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">📡</span>
+          <span class="skill-name">CloudFront</span>
+        </div>
+        <div class="skill-badge" data-skill="84">
+          <span class="skill-icon">🧭</span>
+          <span class="skill-name">Route 53</span>
+        </div>
+        <div class="skill-badge" data-skill="83">
+          <span class="skill-icon">📋</span>
+          <span class="skill-name">CloudFormation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DevOps & Automation -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="category-title">
+        <i class="fas fa-cogs"></i> DevOps & Automation
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">🔧</span>
+          <span class="skill-name">Jenkins</span>
+        </div>
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">GH</span>
+          <span class="skill-name">GitHub Actions</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">🔀</span>
+          <span class="skill-name">AWS CodePipeline</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">TF</span>
+          <span class="skill-name">Terraform</span>
+        </div>
+        <div class="skill-badge" data-skill="84">
+          <span class="skill-icon">📜</span>
+          <span class="skill-name">Ansible</span>
+        </div>
+        <div class="skill-badge" data-skill="89">
+          <span class="skill-icon">🐳</span>
+          <span class="skill-name">Docker</span>
+        </div>
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">K8s</span>
+          <span class="skill-name">Kubernetes</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">📊</span>
+          <span class="skill-name">CloudWatch</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">🔍</span>
+          <span class="skill-name">CloudTrail</span>
+        </div>
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">$</span>
+          <span class="skill-name">Bash Script</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infrastructure & Deployment -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+      <h3 class="category-title">
+        <i class="fas fa-server"></i> Infrastructure & Deployment
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">⚖️</span>
+          <span class="skill-name">Load Balancing</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">📈</span>
+          <span class="skill-name">Auto Scaling</span>
+        </div>
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">🏗️</span>
+          <span class="skill-name">Infrastructure as Code</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">☁️</span>
+          <span class="skill-name">Serverless Arch</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">📈</span>
+          <span class="skill-name">Monitoring</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">📝</span>
+          <span class="skill-name">Logging</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operating Systems -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+      <h3 class="category-title">
+        <i class="fas fa-laptop"></i> Operating Systems
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="90">
+          <span class="skill-icon">🐧</span>
+          <span class="skill-name">Linux</span>
+        </div>
+        <div class="skill-badge" data-skill="89">
+          <span class="skill-icon">🐧</span>
+          <span class="skill-name">Ubuntu</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">🪟</span>
+          <span class="skill-name">Windows</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Analytics -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+      <h3 class="category-title">
+        <i class="fas fa-chart-line"></i> Data Analytics
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="88">
+          <span class="skill-icon">PBI</span>
+          <span class="skill-name">Power BI</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">SQL</span>
+          <span class="skill-name">SQL Analytics</span>
+        </div>
+        <div class="skill-badge" data-skill="84">
+          <span class="skill-icon">PY</span>
+          <span class="skill-name">Python Analysis</span>
+        </div>
+        <div class="skill-badge" data-skill="83">
+          <span class="skill-icon">Viz</span>
+          <span class="skill-name">Data Visualization</span>
+        </div>
+        <div class="skill-badge" data-skill="82">
+          <span class="skill-icon">ETL</span>
+          <span class="skill-name">Data Cleaning</span>
+        </div>
+        <div class="skill-badge" data-skill="81">
+          <span class="skill-icon">Rpt</span>
+          <span class="skill-name">Dashboard Reporting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Programming Languages -->
+    <div class="skill-category" data-aos="fade-up" data-aos-delay="700">
+      <h3 class="category-title">
+        <i class="fas fa-code"></i> Programming Languages
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-badge" data-skill="92">
+          <span class="skill-icon">JS</span>
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill-badge" data-skill="87">
+          <span class="skill-icon">Py</span>
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill-badge" data-skill="85">
+          <span class="skill-icon">$</span>
+          <span class="skill-name">Shell Script</span>
+        </div>
+        <div class="skill-badge" data-skill="86">
+          <span class="skill-icon">C++</span>
+          <span class="skill-name">C++</span>
+        </div>
+        <div class="skill-badge" data-skill="84">
+          <span class="skill-icon">SQL</span>
+          <span class="skill-name">SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="experience-section" data-aos="fade-up">
+  <h2>Professional Experience</h2>
+  <p class="section-subtitle">My Journey & Roles</p>
+
+  <div class="experience-timeline">
+    <div class="experience-card" data-aos="fade-right">
+      <div class="exp-date">1st April - 31st May 2025</div>
+      <div class="exp-content">
+        <h3>Defence Guru Internship</h3>
+        <p class="exp-role">DevOps & Cloud Engineering Intern</p>
+        <p class="exp-description">
+          Worked on AWS services like EC2, S3, and IAM for cloud management and automation. Used Python, Linux, and Bash scripting for system tasks, and practiced Docker, Kubernetes, and Terraform for containerization and Infrastructure as Code. Built a solid foundation in DevOps, CI/CD, and cloud deployment.
+        </p>
+        <div class="exp-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Python</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Bash</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card" data-aos="fade-left">
+      <div class="exp-date">5th June - 31st Dec 2025</div>
+      <div class="exp-content">
+        <h3>Adhayan Institute – AWS Cloud & DevOps Training (Offline)</h3>
+        <p class="exp-role">Professional Development</p>
+        <p class="exp-description">
+          Learning AWS Cloud and DevOps technologies, covering Public, Private, and Hybrid Cloud, IaaS/PaaS/SaaS, and key AWS services like EC2, S3, EBS, RDS, IAM, VPC, CloudWatch, CloudTrail, SQS, SNS, and Elastic Beanstalk. Gaining hands-on skills with Git, Jenkins, Docker, Kubernetes, Terraform, Ansible, and CI/CD pipelines, along with scripting in Linux shells (C-Shell, Korn, Z-Shell, Fish). Focused on automation, deployment, and scalable cloud infrastructure.
+        </p>
+        <div class="exp-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">DevOps</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Ansible</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-card" data-aos="fade-right">
+      <div class="exp-date">Ongoing</div>
+      <div class="exp-content">
+        <h3>Fortune Cloud Institute – MERN Stack Training (Offline)</h3>
+        <p class="exp-role">Full Stack Web Development</p>
+        <p class="exp-description">
+          Learning MERN Stack (MongoDB, Express.js, React.js, Node.js) for Full Stack Web Development. Building web applications using REST APIs, implementing CRUD operations, JWT Authentication, and working on Frontend Backend Integration.
+        </p>
+        <div class="exp-tags">
+          <span class="tag">MERN Stack</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">JWT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section" data-aos="fade-up">
+  <h2>Featured Projects</h2>
+  <p class="section-subtitle">Innovative Solutions & Scalable Systems</p>
+
+  <div class="project-container">
+    <!-- Project 2 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <div class="project-content">
+        <h3>AWS Auto Scaling Web App</h3>
+        <p class="project-tech">AWS ALB • Auto Scaling • VPC • High Availability</p>
+        <p>Designed scalable infrastructure using AWS Application Load Balancer, Auto Scaling Groups, and VPC for high availability.</p>
+        <a href="https://github.com/TanaySasane/AWS-Auto-Scaling-Web-Application" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/TanaySasane/AWS-Auto-Scaling-Web-Application/tree/main/AWS%20Auto%20Scaling%20Web%20Application" target="_blank" rel="noopener">
+          <i class="fas fa-book-open"></i> Readme
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="project-content">
+        <h3>AWS TODO Management Platform</h3>
+        <p class="project-tech">React • Tailwind CSS • AWS Lambda • API Gateway • DynamoDB • S3 • Cognito</p>
+        <p>Serverless TODO web application with full CRUD via Lambda APIs, Cognito security, and React Context-driven UI state.</p>
+        <a href="https://github.com/TanaySasane/MERN-and-AWS-Project" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-stethoscope"></i>
+      </div>
+      <div class="project-content">
+        <h3>Healthify – Doctor Appointment Web App</h3>
+        <p class="project-tech">React • Node.js • Express • MongoDB • Tailwind CSS • JWT • Razorpay</p>
+        <p>Streamlines clinic workflows with Patient/Doctor/Admin logins, appointment booking, and secure Razorpay payments sharing a unified MERN experience.</p>
+        <a href="https://healthify-rosy-ten.vercel.app" target="_blank" rel="noopener">
+          <i class="fas fa-syringe"></i> Live Frontend
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://healthify-a.vercel.app" target="_blank" rel="noopener">
+          <i class="fas fa-user-shield"></i> Admin Panel
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/TanaySasane/Healthify" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-bus"></i>
+      </div>
+      <div class="project-content">
+        <h3>Redbus Clone</h3>
+        <p class="project-tech">React • CSS • Express • MongoDB • Mongoose</p>
+        <p>Cloned the redBus ticketing & hiring platform (redbus.in) to connect travellers with 2500+ operators across India, South East Asia, and Latin America.</p>
+        <p>Features include responsive booking flows, operator listings, and unified ticket management backed by Express APIs and MongoDB.</p>
+        <a href="https://github.com/TanaySasane/Redbus-clone" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <div class="project-content">
+        <h3>Hybrid Intrusion Detection System</h3>
+        <p class="project-tech">Machine Learning • Python • Network Security</p>
+        <p>IDS combining signature and anomaly detection to improve detection accuracy for network threats.</p>
+        <a href="https://tanay1202.pythonanywhere.com/" target="_blank" rel="noopener">
+          <i class="fas fa-rocket"></i> Live App
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/TanaySasane/Intrusion-Detection01" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="project-content">
+        <h3>TwitGuard – Cyberbullying Detection</h3>
+        <p class="project-tech">Deep Learning • NLP • TensorFlow • Twitter API</p>
+        <p>Hybrid deep learning model to detect and classify cyberbullying on Twitter using NLP and behavioral patterns.</p>
+        <a href="https://github.com/TanaySasane/TwitGuard---A-hybrid-deep-learning-approach-to-combat-cyber-bullying-on-Twitter" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/TanaySasane/TwitGuard---A-hybrid-deep-learning-approach-to-combat-cyber-bullying-on-Twitter/blob/main/README.md" target="_blank" rel="noopener">
+          <i class="fas fa-book-open"></i> Readme
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="350">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      <div class="project-content">
+        <h3>Predictive Health Care Analytics</h3>
+        <p class="project-tech">ML Models • Scikit-learn • Python • Data Analysis</p>
+        <p>Built and compared machine learning models to predict diseases and improve healthcare decision making.</p>
+        <a href="https://github.com/TanaySasane/Disease-Prediction-System" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Code
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/TanaySasane/Disease-Prediction-System/blob/main/README.md" target="_blank" rel="noopener">
+          <i class="fas fa-book-open"></i> Readme
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 9 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-chart-bar"></i>
+      </div>
+      <div class="project-content">
+        <h3>NPTEL Certification Data Analysis</h3>
+        <p class="project-tech">Power BI • Python • SQL • Data Visualization</p>
+        <p>Analyzed certification data using Python, SQL and Power BI to identify departmental performance trends.</p>
+        <a href="https://www.linkedin.com/posts/tanay-sasane_powerbi-datavisualization-nptel-share-7266008681308143616-67I3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEDkBB0BaMZOuNamzeVGDuU4rSqLVKK_s9o" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> View on LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 10 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="450">
+      <div class="project-overlay"></div>
+      <div class="project-top-bar"></div>
+      <div class="project-image-placeholder">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div class="project-content">
+        <h3>Sales Dashboard Analytics</h3>
+        <p class="project-tech">Power BI • Sales Analytics • CSV Insights</p>
+        <p>Interactive Power BI dashboard that visualizes sales performance, revenue trends, and customer insights using real-world CSV datasets.</p>
+        <a href="https://github.com/TanaySasane/Sales-PowerBI-Dashboard" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View Dashboard
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="publications" class="publications-section" data-aos="fade-up">
+  <h2>Publications</h2>
+  <p class="section-subtitle">Research & Articles</p>
+
+  <div class="publications-list">
+    <div class="publication-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="pub-icon">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <div class="pub-content">
+        <h3>Predictive Health Care Analytics</h3>
+        <p class="pub-subtitle">Comparative Study of Machine Learning Algorithms for Disease Prediction</p>
+        <p class="pub-journal">Predictive Health Care Analytics - Journal of Data Mining and Management, 2024</p>
+        <a href="https://matjournals.net/engineering/index.php/JoDMM/article/view/444" target="_blank" rel="noopener" class="pub-link">
+          <span>View Publication</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="publication-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="pub-icon">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <div class="pub-content">
+        <h3>Hybrid Network Intrusion Detection System</h3>
+        <p class="pub-subtitle">Advanced Security and Machine Learning Approaches</p>
+        <p class="pub-journal">Hybrid Network Intrusion Detection System - Journal of Emerging Technologies and Innovative Research</p>
+        <a href="https://www.jetir.org/papers/JETIR2505725.pdf" target="_blank" rel="noopener" class="pub-link">
+          <span>View Publication</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="credentials-section" data-aos="fade-up">
+  <div class="section-header">
+    <h2>Resume, Certifications & Publications</h2>
+    <p class="section-subtitle">Important documents that showcase my work, learning, and academic contributions</p>
+  </div>
+
+  <div class="credentials-grid">
+    <article class="credential-card credential-card-featured" data-aos="fade-up" data-aos-delay="100">
+      <div class="credential-icon">
+        <i class="fas fa-file-user"></i>
+      </div>
+      <div class="credential-content">
+        <p class="credential-label">Resume</p>
+        <h3>Tanay Sasane Resume</h3>
+        <p>My latest resume covering MERN Stack development, cloud projects, DevOps tools, and practical experience.</p>
+        <a href="https://drive.google.com/file/d/14qv7L9NxtrRglx-0okgxNb4rHky8kTDr/view?usp=drive_link" target="_blank" rel="noopener" class="credential-link">
+          <span>Open Resume</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </article>
+
+    <article class="credential-card credential-card-featured" data-aos="fade-up" data-aos-delay="150">
+      <div class="credential-icon">
+        <i class="fas fa-flask"></i>
+      </div>
+      <div class="credential-content">
+        <p class="credential-label">Research Paper</p>
+        <h3>Hybrid Network Intrusion Detection System</h3>
+        <p>Hybrid Network Intrusion Detection System - Journal of Emerging Technologies and Innovative Research</p>
+        <a href="https://www.jetir.org/papers/JETIR2505725.pdf" target="_blank" rel="noopener" class="credential-link">
+          <span>View Paper</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </article>
+
+    <article class="credential-card" data-aos="fade-up" data-aos-delay="180">
+      <div class="credential-icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <div class="credential-content">
+        <p class="credential-label">Journal Article</p>
+        <h3>Predictive Health Care Analytics</h3>
+        <p>Predictive Health Care Analytics - Journal of Data Mining and Management</p>
+        <a href="https://matjournals.net/engineering/index.php/JoDMM/article/view/444" target="_blank" rel="noopener" class="credential-link">
+          <span>View Journal Article</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="certifications-panel" data-aos="fade-up" data-aos-delay="200">
+    <div class="certifications-header">
+      <h3>Verified Badges, Certificates & Research Records</h3>
+      <p>Organized links for badges, course certificates, journal certificates, and achievement documents.</p>
+      <a href="https://www.credly.com/users/tanay-sasane" target="_blank" rel="noopener" class="credential-link">
+        <span>View Credly Profile</span>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+
+    <div class="certifications-groups">
+      <div class="certifications-group">
+        <h4 class="certifications-group-title">Credly Badges</h4>
+        <div class="certifications-grid">
+          <a href="https://www.credly.com/users/tanay-sasane" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Credly</span>
+            <h4>AWS Training and Certification</h4>
+          </a>
+
+          <a href="https://www.credly.com/users/tanay-sasane" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Credly</span>
+            <h4>Introduction to Cloud - Coursera</h4>
+          </a>
+
+          <a href="https://www.credly.com/users/tanay-sasane" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Credly</span>
+            <h4>Journey to Cloud: Envisioning Your Solution - IBM</h4>
+          </a>
+
+          <a href="https://www.credly.com/badges/a38b87ea-bebb-4e6f-88be-2eaf22654380" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Credly</span>
+            <h4>SAP ABAP Certification</h4>
+          </a>
+        </div>
+      </div>
+
+      <div class="certifications-group">
+        <h4 class="certifications-group-title">Courses & Certificates</h4>
+        <div class="certifications-grid">
+          <a href="https://smartinternz.com/internships/salesforce_certificates/0101473bb596f5d26a22941ea9d2d25c" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Internship</span>
+            <h4>Salesforce Virtual Internship</h4>
+          </a>
+
+          <a href="https://www.coursera.org/account/accomplishments/verify/SL7N2ZFNPUPJ" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Coursera</span>
+            <h4>Generative AI Introduction and Application</h4>
+          </a>
+
+          <a href="https://nptel.ac.in/noc/E_Certificate/NPTEL24MG75S43940020902742628" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">NPTEL</span>
+            <h4>Project Management</h4>
+          </a>
+
+          <a href="https://www.coursera.org/account/accomplishments/verify/FPWSVON4LHE5" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Coursera</span>
+            <h4>Charts and Dashboards Using Microsoft</h4>
+          </a>
+
+          <a href="https://www.coursera.org/account/accomplishments/verify/JE5AQ1WTDDYU" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Analytics</span>
+            <h4>Charts and Dashboard Using Google Sheets</h4>
+          </a>
+
+          <a href="https://www.mygreatlearning.com/certificate/ONOMCTYI" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Certificate</span>
+            <h4>Prompt Engineering on ChatGPT</h4>
+          </a>
+
+          <a href="https://www.mygreatlearning.com/certificate/BTHOYTQG" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Certificate</span>
+            <h4>Smart English Basics for Professionals</h4>
+          </a>
+
+          <a href="https://nptel.ac.in/noc/E_Certificate/NPTEL24CS95S36720015104277153" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">NPTEL</span>
+            <h4>Industry 4.0 and IIoT</h4>
+          </a>
+
+          <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS79S64970080804485095" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">NPTEL</span>
+            <h4>Privacy and Security in Online Social Media</h4>
+          </a>
+        </div>
+      </div>
+
+      <div class="certifications-group">
+        <h4 class="certifications-group-title">Research & Achievements</h4>
+        <div class="certifications-grid">
+          <a href="https://drive.google.com/file/d/13THDS9NNrX3eulj64bFH7zgOmVMtN05M/view?usp=drive_link" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Certificate</span>
+            <h4>MAT Journals Certificate</h4>
+          </a>
+
+          <a href="https://www.jetir.org/papers/JETIR2505725.pdf" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Research</span>
+            <h4>Hybrid Network Intrusion Detection System</h4>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1_RUzAkB0FKp2g_3dYAYMMqk6RjHB2y3t/view?usp=drive_link" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Certificate</span>
+            <h4>JETIR Research Paper Certificate</h4>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1rmh1pW0HTAc3GvdNbjz1-yxlIYMi-fY1/view?usp=drive_link" target="_blank" rel="noopener" class="certificate-item">
+            <span class="certificate-badge">Achievement</span>
+            <h4>DIPEX</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="leadership-section" data-aos="fade-up">
+  <h2>Leadership & Responsibilities</h2>
+  <p class="section-subtitle">Community & Event Organization</p>
+
+  <div class="responsibility-cards">
+    <div class="responsibility-card" data-aos="fade-right">
+      <div class="resp-icon">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <div class="resp-content">
+        <h3>ACES Committee – Event In-Charge</h3>
+        <p>
+          Organized technical hackathons including ACES PROFEST
+          and conducted multiple events such as alumni meets,
+          career guidance seminars and NGO activities.
+        </p>
+      </div>
+    </div>
+
+    <div class="responsibility-card" data-aos="fade-left">
+      <div class="resp-icon">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <div class="resp-content">
+        <h3>Sanjivani AWS Cloud Club – Student Advisory</h3>
+        <p>
+          Conducted workshops and awareness sessions about
+          AWS cloud computing technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="achievements-section" data-aos="fade-up">
+  <h2>Achievements & Recognition</h2>
+  <p class="section-subtitle">Awards & Milestones</p>
+
+  <div class="achievements-grid">
+    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="achievement-icon">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div class="achievement-content">
+        <h3>DIPEX 2024</h3>
+        <p>Selected in Top 100 projects from Maharashtra and Goa for project "Dimension AI"</p>
+        <div class="achievement-date">2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section" data-aos="fade-up">
+  <h2>Get In Touch</h2>
+  <p class="section-subtitle">Let's Build Something Amazing Together</p>
+
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <form id="contact-form" class="contact-form" data-aos="fade-right" data-aos-delay="100">
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="Your Full Name" 
+          required
+          class="form-input"
+        >
+        <label for="name" class="form-label">Name</label>
+      </div>
+
+      <div class="form-group">
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="your.email@example.com" 
+          required
+          class="form-input"
+        >
+        <label for="email" class="form-label">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="subject" 
+          placeholder="Subject" 
+          class="form-input"
+        >
+        <label for="subject" class="form-label">Subject</label>
+      </div>
+
+      <div class="form-group">
+        <textarea 
+          id="message" 
+          placeholder="Your Message..." 
+          rows="4" 
+          required
+          class="form-input form-textarea"
+        ></textarea>
+        <label for="message" class="form-label">Message</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-wide">
+        <span>Send Message</span>
+        <i class="fas fa-paper-plane"></i>
+      </button>
+
+      <div class="form-message" id="formMessage"></div>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info" data-aos="fade-left" data-aos-delay="100">
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h4>Email</h4>
+          <p>
+            <a href="mailto:sasanetanay121@gmail.com">sasanetanay121@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="info-content">
+          <h4>Phone</h4>
+          <p>
+            <a href="tel:+919322774275">+91 9322774275</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="info-content">
+          <h4>Connect With Me</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/tanay-sasane/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/TanaySasane" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Message -->
+      <div class="success-message" id="successMessage">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="success-text">
+          <h4>Message Sent!</h4>
+          <p>Thanks for reaching out. I'll get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M 0,30 Q 300,10 600,30 T 1200,30 L 1200,60 L 0,60 Z" fill="url(#waveGradient)"></path>
+      <defs>
+        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.3" />
+          <stop offset="50%" style="stop-color:#22d3ee;stop-opacity:0.2" />
+          <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.3" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Tanay Sasane</h3>
+        <p>Full-Stack Developer & Cloud Architect</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/tanay-sasane/" target="_blank" rel="noopener" class="footer-social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/TanaySasane" target="_blank" rel="noopener" class="footer-social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:sasanetanay121@gmail.com" class="footer-social-icon" title="Contact">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span class="highlight">Tanay Sasane</span> | MERN Stack & Cloud DevOps Engineer</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     📚 EXTERNAL CDN LIBRARIES
+     ════════════════════════════════════════ -->
+
+<!-- Main JavaScript -->
+<script src="script.js" defer></script>
+
+</body>
+
+</html>
+
+
+
