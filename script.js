@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isFileProtocol || isLocalBrowserPreview
       ? ['http://localhost:3000', 'http://127.0.0.1:3000']
       : [''];
-  const introDisplayTime = prefersReducedMotion ? 1500 : 8000;
+  const introDisplayTime = prefersReducedMotion ? 1500 : 20000;
   const introFadeTime = prefersReducedMotion ? 0 : 700;
   let introTimerId = null;
   let introFadeTimerId = null;
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     introFadeTimerId = window.setTimeout(() => {
       body.classList.remove('intro-active', 'intro-closing');
+      body.classList.add('intro-revealed');
       introScreen?.classList.remove('is-playing');
       onComplete?.();
     }, introFadeTime);
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     clearIntroTimers();
+    body.classList.remove('intro-revealed');
     body.classList.add('intro-active');
     body.classList.remove('intro-closing');
     startIntroVisuals();
