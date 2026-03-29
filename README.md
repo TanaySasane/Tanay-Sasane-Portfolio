@@ -1,55 +1,51 @@
-# AWS TODO Management Project
-
-GitHub: https://github.com/TanaySasane/MERN-and-AWS-Project
+# TODO Web App
 
 ## Overview
-This monorepo hosts an AWS-focused TODO web application that combines a React frontend with serverless backend services. It uses infrastructure-as-code to deploy a resilient, fully managed stack that can scale with user demand.
+This monorepo hosts a MERN stack TODO web application built for AWS, following modern architecture patterns to keep the system scalable, secure, and easy to operate.
 
 ## Features
-- Full CRUD flow for TODO items backed by AWS services.
-- Real-time frontend updates powered by React Context API.
-- Secure, user-aware APIs protected by Cognito authorizers.
-- Static frontend hosting via S3 + CloudFront with global delivery.
+- Create, retrieve, update, and delete TODO tasks through a polished UI.
+- Real-time frontend updates driven by React Context and utility-driven styling.
+- Secure, scalable hosting on AWS (Lambda, API Gateway, CloudFront) for global reach.
 
 ## Technical Details
 
 ### Frontend
-- **Technologies & Libraries**: React for interfaces, Tailwind CSS for utilities, and the React Context API for shared state across components.
+- **Technologies & Libraries**: React, Tailwind CSS, and the React Context API for shared state management.
 - **Key Components**:
-  - `TodoList`: Renders TODO entries and wires up create/update/delete actions.
-  - `GlobalContext`: Manages TODO state, loading indicators, and error handling for the UI.
+  - `TodoList`: Renders the task list and wires up create/update/delete interactions.
+  - `GlobalContext`: Maintains TODO data, loading states, and error handling across the UI.
 
 ### Backend
-- **Technologies & Libraries**: Node.js runtime hosting serverless logic, API Gateway as the HTTP façade, Cognito for identity, and Lambda functions for every business operation.
+- **Technologies & Libraries**: Node.js, AWS Lambda, API Gateway, and Amazon Cognito.
 - **Lambda Functions**:
-  - `CreateTodoLambda`: Persists new TODO data.
-  - `GetTodosLambda`: Reads the list of TODOs.
-  - `UpdateTodoLambda`: Applies edits to existing tasks.
-  - `DeleteTodoLambda`: Removes tasks and cleans related metadata.
-  - `GenPresignedUrlLambda`: Issues presigned S3 URLs for image uploads or attachments.
+  - `CreateTodoLambda`: Persists new tasks.
+  - `GetTodosLambda`: Returns the current task list.
+  - `UpdateTodoLambda`: Applies edits to existing TODOs.
+  - `DeleteTodoLambda`: Removes tasks safely.
+  - `GenPresignedUrlLambda`: Issues presigned S3 URLs for optional uploads.
 
 ## Infrastructure
-- **Tools**: AWS CDK defines stacks for compute, data, and networking resources.
-- **Services**: DynamoDB stores TODO items, S3 hosts static assets, and CloudFront accelerates delivery.
-- **Constructs**:
-  - `BackendConstruct`: Configures Lambdas, API Gateway, and stage settings.
-  - `DataBaseConstruct`: Builds DynamoDB tables with appropriate keys and indexes.
-  - `S3Construct`: Creates buckets for hosting and uploads with lifecycle/security policies.
+- **Tools & Services**: AWS CDK, DynamoDB, S3, and CloudFront.
+- **Key Constructs**:
+  - `BackendConstruct`: Boots Lambda functions, API Gateway stages, and authorizers.
+  - `DataBaseConstruct`: Builds DynamoDB tables with the right keys and indexes.
+  - `S3Construct`: Creates buckets for static hosting and asset uploads.
 
 ## Deployment
-- CDK pipelines provision infrastructure and deploy Lambda code.
-- S3 buckets host the compiled frontend, while CloudFront distributes it globally with SSL.
-- CI/CD hooks rebuild and redeploy on commits to the main branch.
+- Frontend assets are hosted on S3 and delivered globally through CloudFront.
+- API routes are exposed via API Gateway backed by Lambda logic.
+- CI/CD pipelines (CDK/CodePipeline) rebuild and redeploy on commit to the main branch.
 
 ## Security
-- Cognito user pools authenticate visitors, and API Gateway authorizers enforce scoped access.
-- IAM roles follow the least privilege principle for each Lambda.
-- Static assets served over HTTPS with CloudFront and custom domain support.
+- Amazon Cognito manages authentication/authorization for users.
+- API Gateway authorizers enforce Cognito policies before hitting Lambda.
+- IAM roles follow the least-privilege principle for every serverless component.
 
 ## Programming Techniques
-- **Infrastructure as Code**: CDK keeps environment definition versioned alongside code.
-- **Serverless Architecture**: Business logic lives in stateless Lambdas, reducing server maintenance.
-- **Continuous Integration/Deployment**: Automated pipelines refresh both infra and application layers on push.
+- **Infrastructure as Code (IaC)**: AWS CDK keeps infrastructure definition versioned alongside the app code.
+- **Serverless Architecture**: Business logic lives in stateless Lambdas to avoid server maintenance.
+- **Continuous Integration/Deployment**: Automated pipelines refresh both infra and application layers on every push.
 
 ## Conclusion
-This project showcases how to build a maintainable, scalable TODO experience entirely on AWS, pairing modern React tooling with serverless compute and secure infrastructure provisioning.
+This project demonstrates how to deliver a maintainable, scalable TODO experience by combining React, serverless APIs, and AWS-managed networking in one cohesive solution.

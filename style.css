@@ -2657,6 +2657,32 @@ section {
   opacity: 1;
 }
 
+.skill-showcase {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(15, 13, 27, 0.7);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: var(--text-light);
+}
+
+.skill-showcase h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.skill-highlight-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-highlight-list li {
+  line-height: 1.6;
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
