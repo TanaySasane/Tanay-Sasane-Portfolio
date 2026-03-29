@@ -15,15 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lastUpdated = document.getElementById('lastUpdated');
   const messagesList = document.getElementById('messagesList');
 
-  const isFileProtocol = window.location.protocol === 'file:';
-  const isLocalPreview =
-    ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
-    window.location.port &&
-    window.location.port !== '3000';
-  const apiBaseUrls =
-    isFileProtocol || isLocalPreview
-      ? ['http://127.0.0.1:3000', 'http://localhost:3000']
-      : [''];
+  const apiBaseUrls = [''];
 
   const storageKey = 'portfolio-admin-password';
   let adminPassword = sessionStorage.getItem(storageKey) || '';
@@ -177,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setFeedback(`Loaded ${loadedMessages.length} message${loadedMessages.length === 1 ? '' : 's'}.`, 'success');
     } catch (error) {
       setStatus('Server offline', 'error');
-      setFeedback('Could not reach the backend. Start npm.cmd run dev on port 3000.', 'error');
+      setFeedback('Could not reach the server. Please try again later.', 'error');
     } finally {
       setBusyState(false);
     }

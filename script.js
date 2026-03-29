@@ -14,16 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const statNumbers = document.querySelectorAll('.stat-number');
   const contactForm = document.getElementById('contact-form');
   const formMessage = document.getElementById('formMessage');
-  const isFileProtocol = window.location.protocol === 'file:';
-  const isLocalBrowserPreview =
-    ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
-    window.location.port &&
-    window.location.port !== '3000';
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const apiBaseUrls =
-    isFileProtocol || isLocalBrowserPreview
-      ? ['http://localhost:3000', 'http://127.0.0.1:3000']
-      : [''];
+  const apiBaseUrls = [''];
   const introDisplayTime = prefersReducedMotion ? 1500 : 5000;
   const introFadeTime = prefersReducedMotion ? 0 : 700;
   let introTimerId = null;
@@ -318,16 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!response.ok) {
-          if (response.status === 404) {
-            showMessage('Start the Node server with npm.cmd run dev and open http://localhost:3000.', 'error');
-            return;
-          }
-
-          if (response.status === 503) {
-            showMessage(payload.error || 'MongoDB is not connected yet. Check your server and database.', 'error');
-            return;
-          }
-
           showMessage(payload.error || 'Failed to send message. Please try again.', 'error');
           return;
         }
@@ -335,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showMessage(payload.message || "Thanks for reaching out. I'll get back to you soon.", 'success');
         contactForm.reset();
       } catch (error) {
-        showMessage('Backend server is not reachable. Run npm.cmd run dev, then open http://127.0.0.1:3000 or http://localhost:3000.', 'error');
+        showMessage('Could not reach the server. Please try again later.', 'error');
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
