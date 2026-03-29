@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isFileProtocol || isLocalBrowserPreview
       ? ['http://localhost:3000', 'http://127.0.0.1:3000']
       : [''];
-  const introDisplayTime = prefersReducedMotion ? 1500 : 20000;
+  const introDisplayTime = prefersReducedMotion ? 1500 : 5000;
   const introFadeTime = prefersReducedMotion ? 0 : 700;
   let introTimerId = null;
   let introFadeTimerId = null;
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       playIntro(() => {
         window.location.hash = 'home';
-      }, prefersReducedMotion ? 1200 : 6000);
+      }, prefersReducedMotion ? 1200 : 5000);
     });
   }
 
