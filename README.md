@@ -1,78 +1,29 @@
-# Tanay Sasane Portfolio Platform
+# Tanay Sasane Portfolio Snapshot
 
-> A polished contact experience with a lightweight Express/Mongo API, mobile-first visuals, and admin controls that keep the stories coming.
+Minimal backend/frontend mention: this portfolio is served as a static HTML/CSS/JS experience with supporting Node/Express + Mongo contact API so the site, form handling, and admin view all run from a single, production-ready Node process.
 
 ## Quick links
-- **Repository**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio
-- **Open issues**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio/issues
-- **Live preview (local)**: ./index.html
-- **Admin console**: ./admin.html
-- **Server API surface**: ./server.js
-- **Environment template**: ./.env.example
+- **Portfolio entry**: `index.html` (live hero, stats, skills, projects, resume link).
+- **Admin console**: `admin.html`.
+- **Backend API**: `server.js`.
+- **Environment template**: `.env.example`.
+- **Resume PDF**: https://drive.google.com/file/d/14qv7L9NxtrRglx-0okgxNb4rHky8kTDr/view?usp=drive_link
+- **LinkedIn projects**: https://www.linkedin.com/in/tanay-sasane/
+- **GitHub repo**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio
 
-## Vision & value
-- Showcase a human-first portfolio backed by measurable interactions (contact messages, admin reviews, and a clean, responsive UI).
-- Keep the deployment simple: static assets served directly from the repo root, while Express exposes a guarded contact API.
-- Make it easy for future collaborators to understand the stack, run the project locally, and extend the experience.
+## Section-by-section data (anchors refer to `index.html`)
+- **Home `#home`** - Animated hero that introduces Tanay Sasane as a MERN Stack & DevOps Engineer, showcases typing effects, and links directly to the resume and project gallery buttons.
+- **About `#about`** - B.Tech Computer Engineering (2025) graduate from Sanjivani College (SPPU) with hands-on AWS exposure (EC2, S3, RDS, IAM, VPC) plus MERN stack + DevOps tooling (Docker, Kubernetes, Terraform, Jenkins, GitHub Actions). Stats highlight 10+ projects, 25+ skills, and 2 publications.
+- **Education `#education`** - Sanjivani College (SPPU 2021-2025, CGPA 6.52), Higher Secondary (2021, 78.67%), Secondary (2019, 74.6%). Each timeline entry links to the section so visitors get academic milestones in context.
+- **Skills `#skills`** - Categorized badges for MERN (React, Node, Express, Mongo, REST APIs, JWT), Cloud Platforms (EC2, S3, RDS, IAM, VPC, ELB, Lambda, ECS, CloudFront, Route 53, CloudFormation), DevOps & Automation (Jenkins, GitHub Actions, Terraform, Ansible, Docker, Kubernetes, CloudWatch, CloudTrail), Infrastructure & Deployment (Load Balancers, Auto Scaling, IaC, Serverless), Operating Systems (Linux, Ubuntu, Windows), Data Analytics (Power BI, SQL, Python, Visualization, ETL, Reporting), and Languages (JavaScript, Python, Shell, C++, SQL).
+- **Experience `#experience`** - Highlighted 1 April-31 May 2025 Defence Guru internship focused on AWS automation (EC2, S3, IAM), Linux/Bash tooling, Docker+Kubernetes, and Terraform-based Infrastructure as Code.
+- **Projects `#projects`** - Project cards list items such as "NPTEL Certification Data Analysis" (Power BI/Python/SQL with a LinkedIn showcase) and "Sales Dashboard Analytics" (Power BI, CSV insights, GitHub link). Visitors can click through to GitHub, LinkedIn, or referenced dashboards.
+- **Publications `#publications`** - Links to journal articles: "Predictive Health Care Analytics" (Journal of Data Mining and Management 2024) and "Hybrid Network Intrusion Detection System" (Journal of Emerging Technologies and Innovative Research). Each card points to the public PDF/website.
+- **Credentials `#credentials`** - Shows the live resume, research paper, journal article, plus certification groups with Credly/AWS badges, Coursera/SmartInternz/NPTEL courses, and research certificates (MAT Journals, JETIR, DIPEX). Links go to the source documents or profile pages.
+- **Leadership `#leadership`** - Notes ACES committee event leadership and Sanjivani AWS Cloud Club advisory contributions with linked descriptions in the portfolio.
+- **Achievements `#achievements`** - DIPEX 2024 recognition for the "Dimension AI" project (top 100 from Maharashtra-Goa).
+- **Contact `#contact`** - Live contact form plus published email `sasanetanay121@gmail.com`, phone `+91 9322774275`, social/LinkedIn/GitHub links, and Pune (Kothrud) address.
 
-## Highlight reel
-1. **Contact form with validation** - `script.js` drives the UI while `server.js` validates, sanitizes, and stores all messages in MongoDB via Mongoose.
-2. **Admin-friendly workflow** - `admin.html` exposes a protected message inbox with optional deletes, powered by `x-admin-password` or bearer authentication.
-3. **Single-server delivery model** - Static files, the public site, and API endpoints all originate from the same Node/Express process for a frictionless deploy.
-
-## Technical canvas
-### Frontend
-- Built with semantic HTML + CSS and enriched by `script.js` for smooth, form-first interactions.
-- Responsive layout adapts for desktop, tablet, and mobile fingertips without a heavyweight framework.
-- Media assets (profile photo, icons) live alongside the static markup for fast local loads.
-Frontend data story: every contact submission is parsed client-side, validated in under 200ms, and mirrored to the admin inbox so visitors instantly see the result of their outreach.
-
-### Backend
-- Node + Express server (`server.js`) handles `/api/contact`, `/api/admin/messages`, and admin delete routes with CORS, JSON parsing, and rate-safe paths.
-- MongoDB (local or Atlas) persists contact data with a schema that enforces field lengths, required values, and timestamps.
-- Admin middleware uses `crypto.timingSafeEqual` to compare credentials so attackers cannot abuse timing leaks.
-Backend data story: MongoDB stores every conversation with timestamps, allowing the admin console to surface the freshest five messages while older insights remain archived for review.
-
-### Infrastructure & ops
-- Rolling deployment is as simple as `npm install` + `npm start` on any VPS, PaaS, or Docker container.
-- Customize ports via `PORT` and the Mongo URI via `MONGODB_URI` in `.env` for staging/production parity.
-- Logging and lifecycle hooks (connection events, error catch blocks) keep the console readable in production.
-
-## Data spotlight
-- **Messages captured**: Every visitor submission (name, email, subject, message) is stored in MongoDB with `submittedAt` and `createdAt` timestamps for trackable conversations.
-- **Response promise**: Frontend validations keep the form error rate low, while backend persistence ensures the admin console can surface the five most recent entries instantly.
-- **Portfolio usage**: Static assets and scripts load within 600ms on modern networks, letting the data-rich contact form feel fast and alive.
-
-## Getting started
-1. Install dependencies: `npm install`
-2. Copy `.env.example` -> `.env` and provide values for `MONGODB_URI`, `ADMIN_PASSWORD`, and any other local secrets.
-3. Run locally: `npm run dev` (falls back to port `3000`).
-4. Visit `http://localhost:3000` to interact with the portfolio, and `http://localhost:3000/admin` to review messages.
-5. Use `curl -H "Authorization: Bearer YOUR_ADMIN_PASSWORD" http://localhost:3000/api/admin/messages` to script approvals or cleanups.
-
-## Deployment checklist
-- [x] Ensure MongoDB credentials are locked behind a secrets manager or vault.
-- [x] Point `MONGODB_URI` at the production cluster (Atlas, DocumentDB, etc.) and whitelist the app IP.
-- [x] Set `ADMIN_PASSWORD` to a strong secret and rotate it via environment overrides.
-- [x] Serve the Node app via a process manager (PM2, systemd, Docker CMD) so restarts survive crashes.
-
-## Contribution notes
-1. Fork the repo, branch from `master`, and keep commits tidy (use `docs:`, `feat:`, or `fix:` prefixes).
-2. Open PRs with a short summary, testing notes, and a checklist for env changes or migrations.
-3. Questions? Open an issue or contact the maintainer through the repository discussion tab.
-
-## Core files at a glance
-- `index.html` - Primary landing page and contact form.
-- `admin.html` - Admin UI for reviewing/deleting messages.
-- `script.js` - Frontend logic that submits JSON, shows errors, and animates form feedback.
-- `style.css` - Utility-driven styling tuned for the portfolio look/feel.
-- `server.js` - Express API, admin auth, Mongo schema, and route definitions.
-- `.env.example` - Environment keys required before deployment.
-
-## Next ideas
-1. Add automated validation tests for the backend responses (Jest or Supertest).
-2. Introduce a deployment workflow (GitHub Actions + PM2/Docker) that restarts the server and runs lint checks.
-3. Replace the static admin page with a React/Alpine micro-app if more stateful dashboards are needed.
-
-***
-Crafted on March 30, 2026 to stay aligned with the latest repo layout and contact requirements. Should be refreshed whenever new sub-pages or APIs are introduced.
+## Why this repo matters
+- Keeps the static portfolio, contact UI, and admin app in one Node-based stack so every section (home, about, projects, publications, resume) is backed by actual data or verified links.
+- Everyone viewing GitHub can click through to the sections above, follow the resume/certification links, and use the contact form (the backend API records submissions in MongoDB).
