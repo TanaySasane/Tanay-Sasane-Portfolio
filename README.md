@@ -4,7 +4,6 @@
 
 ## Quick links
 - **Repository**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio
-- **Open issues**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio/issues
 - **Live preview (local)**: ./index.html
 - **Admin console**: ./admin.html
 - **Server API surface**: ./server.js
