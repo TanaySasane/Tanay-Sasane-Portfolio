@@ -1,51 +1,71 @@
-# TODO Web App
+# Tanay Sasane Portfolio Platform
 
-## Overview
-This monorepo hosts a MERN stack TODO web application built for AWS, following modern architecture patterns to keep the system scalable, secure, and easy to operate.
+> A polished contact experience with a lightweight Express/Mongo API, mobile-first visuals, and admin controls that keep the stories coming.
 
-## Features
-- Create, retrieve, update, and delete TODO tasks through a polished UI.
-- Real-time frontend updates driven by React Context and utility-driven styling.
-- Secure, scalable hosting on AWS (Lambda, API Gateway, CloudFront) for global reach.
+## Quick links
+- **Repository**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio
+- **Open issues**: https://github.com/TanaySasane/Tanay-Sasane-Portfolio/issues
+- **Live preview (local)**: ./index.html
+- **Admin console**: ./admin.html
+- **Server API surface**: ./server.js
+- **Environment template**: ./.env.example
 
-## Technical Details
+## Vision & value
+- Showcase a human-first portfolio backed by measurable interactions (contact messages, admin reviews, and a clean, responsive UI).
+- Keep the deployment simple: static assets served directly from the repo root, while Express exposes a guarded contact API.
+- Make it easy for future collaborators to understand the stack, run the project locally, and extend the experience.
 
+## Highlight reel
+1. **Contact form with validation** - `script.js` drives the UI while `server.js` validates, sanitizes, and stores all messages in MongoDB via Mongoose.
+2. **Admin-friendly workflow** - `admin.html` exposes a protected message inbox with optional deletes, powered by `x-admin-password` or bearer authentication.
+3. **Single-server delivery model** - Static files, the public site, and API endpoints all originate from the same Node/Express process for a frictionless deploy.
+
+## Technical canvas
 ### Frontend
-- **Technologies & Libraries**: React, Tailwind CSS, and the React Context API for shared state management.
-- **Key Components**:
-  - `TodoList`: Renders the task list and wires up create/update/delete interactions.
-  - `GlobalContext`: Maintains TODO data, loading states, and error handling across the UI.
+- Built with semantic HTML + CSS and enriched by `script.js` for smooth, form-first interactions.
+- Responsive layout adapts for desktop, tablet, and mobile fingertips without a heavyweight framework.
+- Media assets (profile photo, icons) live alongside the static markup for fast local loads.
 
 ### Backend
-- **Technologies & Libraries**: Node.js, AWS Lambda, API Gateway, and Amazon Cognito.
-- **Lambda Functions**:
-  - `CreateTodoLambda`: Persists new tasks.
-  - `GetTodosLambda`: Returns the current task list.
-  - `UpdateTodoLambda`: Applies edits to existing TODOs.
-  - `DeleteTodoLambda`: Removes tasks safely.
-  - `GenPresignedUrlLambda`: Issues presigned S3 URLs for optional uploads.
+- Node + Express server (`server.js`) handles `/api/contact`, `/api/admin/messages`, and admin delete routes with CORS, JSON parsing, and rate-safe paths.
+- MongoDB (local or Atlas) persists contact data with a schema that enforces field lengths, required values, and timestamps.
+- Admin middleware uses `crypto.timingSafeEqual` to compare credentials so attackers cannot abuse timing leaks.
 
-## Infrastructure
-- **Tools & Services**: AWS CDK, DynamoDB, S3, and CloudFront.
-- **Key Constructs**:
-  - `BackendConstruct`: Boots Lambda functions, API Gateway stages, and authorizers.
-  - `DataBaseConstruct`: Builds DynamoDB tables with the right keys and indexes.
-  - `S3Construct`: Creates buckets for static hosting and asset uploads.
+### Infrastructure & ops
+- Rolling deployment is as simple as `npm install` + `npm start` on any VPS, PaaS, or Docker container.
+- Customize ports via `PORT` and the Mongo URI via `MONGODB_URI` in `.env` for staging/production parity.
+- Logging and lifecycle hooks (connection events, error catch blocks) keep the console readable in production.
 
-## Deployment
-- Frontend assets are hosted on S3 and delivered globally through CloudFront.
-- API routes are exposed via API Gateway backed by Lambda logic.
-- CI/CD pipelines (CDK/CodePipeline) rebuild and redeploy on commit to the main branch.
+## Getting started
+1. Install dependencies: `npm install`
+2. Copy `.env.example` -> `.env` and provide values for `MONGODB_URI`, `ADMIN_PASSWORD`, and any other local secrets.
+3. Run locally: `npm run dev` (falls back to port `3000`).
+4. Visit `http://localhost:3000` to interact with the portfolio, and `http://localhost:3000/admin` to review messages.
+5. Use `curl -H "Authorization: Bearer YOUR_ADMIN_PASSWORD" http://localhost:3000/api/admin/messages` to script approvals or cleanups.
 
-## Security
-- Amazon Cognito manages authentication/authorization for users.
-- API Gateway authorizers enforce Cognito policies before hitting Lambda.
-- IAM roles follow the least-privilege principle for every serverless component.
+## Deployment checklist
+- [x] Ensure MongoDB credentials are locked behind a secrets manager or vault.
+- [x] Point `MONGODB_URI` at the production cluster (Atlas, DocumentDB, etc.) and whitelist the app IP.
+- [x] Set `ADMIN_PASSWORD` to a strong secret and rotate it via environment overrides.
+- [x] Serve the Node app via a process manager (PM2, systemd, Docker CMD) so restarts survive crashes.
 
-## Programming Techniques
-- **Infrastructure as Code (IaC)**: AWS CDK keeps infrastructure definition versioned alongside the app code.
-- **Serverless Architecture**: Business logic lives in stateless Lambdas to avoid server maintenance.
-- **Continuous Integration/Deployment**: Automated pipelines refresh both infra and application layers on every push.
+## Contribution notes
+1. Fork the repo, branch from `master`, and keep commits tidy (use `docs:`, `feat:`, or `fix:` prefixes).
+2. Open PRs with a short summary, testing notes, and a checklist for env changes or migrations.
+3. Questions? Open an issue or contact the maintainer through the repository discussion tab.
 
-## Conclusion
-This project demonstrates how to deliver a maintainable, scalable TODO experience by combining React, serverless APIs, and AWS-managed networking in one cohesive solution.
+## Core files at a glance
+- `index.html` - Primary landing page and contact form.
+- `admin.html` - Admin UI for reviewing/deleting messages.
+- `script.js` - Frontend logic that submits JSON, shows errors, and animates form feedback.
+- `style.css` - Utility-driven styling tuned for the portfolio look/feel.
+- `server.js` - Express API, admin auth, Mongo schema, and route definitions.
+- `.env.example` - Environment keys required before deployment.
+
+## Next ideas
+1. Add automated validation tests for the backend responses (Jest or Supertest).
+2. Introduce a deployment workflow (GitHub Actions + PM2/Docker) that restarts the server and runs lint checks.
+3. Replace the static admin page with a React/Alpine micro-app if more stateful dashboards are needed.
+
+***
+Crafted on March 30, 2026 to stay aligned with the latest repo layout and contact requirements. Should be refreshed whenever new sub-pages or APIs are introduced.
