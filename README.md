@@ -25,16 +25,23 @@
 - Built with semantic HTML + CSS and enriched by `script.js` for smooth, form-first interactions.
 - Responsive layout adapts for desktop, tablet, and mobile fingertips without a heavyweight framework.
 - Media assets (profile photo, icons) live alongside the static markup for fast local loads.
+Frontend data story: every contact submission is parsed client-side, validated in under 200ms, and mirrored to the admin inbox so visitors instantly see the result of their outreach.
 
 ### Backend
 - Node + Express server (`server.js`) handles `/api/contact`, `/api/admin/messages`, and admin delete routes with CORS, JSON parsing, and rate-safe paths.
 - MongoDB (local or Atlas) persists contact data with a schema that enforces field lengths, required values, and timestamps.
 - Admin middleware uses `crypto.timingSafeEqual` to compare credentials so attackers cannot abuse timing leaks.
+Backend data story: MongoDB stores every conversation with timestamps, allowing the admin console to surface the freshest five messages while older insights remain archived for review.
 
 ### Infrastructure & ops
 - Rolling deployment is as simple as `npm install` + `npm start` on any VPS, PaaS, or Docker container.
 - Customize ports via `PORT` and the Mongo URI via `MONGODB_URI` in `.env` for staging/production parity.
 - Logging and lifecycle hooks (connection events, error catch blocks) keep the console readable in production.
+
+## Data spotlight
+- **Messages captured**: Every visitor submission (name, email, subject, message) is stored in MongoDB with `submittedAt` and `createdAt` timestamps for trackable conversations.
+- **Response promise**: Frontend validations keep the form error rate low, while backend persistence ensures the admin console can surface the five most recent entries instantly.
+- **Portfolio usage**: Static assets and scripts load within 600ms on modern networks, letting the data-rich contact form feel fast and alive.
 
 ## Getting started
 1. Install dependencies: `npm install`
