@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[build.environment]
+  ADMIN_PASSWORD = "admin123"
+
+[functions]
+  directory = "netlify/functions"
